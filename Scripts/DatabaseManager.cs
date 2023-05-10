@@ -17,9 +17,10 @@ public class ProductData
 
 public class DatabaseManager : MonoBehaviour
 {
-    private string connectionString = "SERVER=database-roi.ct1udap7bruq.sa-east-1.rds.amazonaws.com;PORT=3306;DATABASE=RoiMarket;UID=diazfabian;PASSWORD=Juanarosapanta;";
+    private string connectionString;
     void Start()
     {
+        connectionString = $"SERVER=database-roi.ct1udap7bruq.sa-east-1.rds.amazonaws.com;PORT=3306;DATABASE=RoiMarket;UID=diazfabian;PASSWORD={System.Environment.GetEnvironmentVariable("DB_PASSWORD")};";
         TestConnection();
     }
 
