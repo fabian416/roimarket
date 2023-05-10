@@ -1,2 +1,2 @@
 # roimarket
-game of a super market 
+scripts with the logic of the virtual supermarket
